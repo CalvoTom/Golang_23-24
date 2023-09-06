@@ -13,10 +13,11 @@ func PrintComb() {
 					z01.PrintRune(r1)
 					z01.PrintRune(r2)
 					z01.PrintRune(r3)
-					z01.PrintRune(rune(44))
-					z01.PrintRune(rune(32))
+					if r1 != rune(55) {
+						z01.PrintRune(rune(44))
+						z01.PrintRune(rune(32))
+					}
 				}
-
 			}
 		}
 	}
