@@ -1,9 +1,9 @@
-package main
+package piscine
 
 import "github.com/01-edu/z01"
 
 func main() {
-	for i := 122; i > 96; i-- {
+	for i := 97; i < 123; i++ {
 		rn := rune(i)
 		z01.PrintRune(rn)
 	}
