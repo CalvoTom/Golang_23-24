@@ -5,7 +5,7 @@ func Compare(a, b string) int {
 	str_rn_b := []rune(b)
 	minLength := min(len(str_rn_a), len(str_rn_b))
 	i := 0
-	for i < minLength { //use for loop to compare strings
+	for i < minLength {
 		if str_rn_a[i] != str_rn_b[i] {
 			break
 		}
