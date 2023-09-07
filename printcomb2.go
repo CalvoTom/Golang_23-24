@@ -18,8 +18,8 @@ func PrintComb2() {
 						z01.PrintRune(r3)
 						z01.PrintRune(r4)
 						if r1 != rune(57) || r2 != rune(56) {
-							z01.PrintRune(rune(32))
 							z01.PrintRune(rune(44))
+							z01.PrintRune(rune(32))
 						}
 					}
 					if r1 == r3 && r2 < r4 {
@@ -29,8 +29,8 @@ func PrintComb2() {
 						z01.PrintRune(r3)
 						z01.PrintRune(r4)
 						if r1 != rune(57) || r2 != rune(56) {
-							z01.PrintRune(rune(32))
 							z01.PrintRune(rune(44))
+							z01.PrintRune(rune(32))
 						}
 					}
 				}
