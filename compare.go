@@ -1,17 +1,36 @@
 package piscine
 
 func Compare(a, b string) int {
-	tab_a := []rune(a)
-	tab_b := []rune(b)
-	longeur_tab_A := len(tab_a)
-	longeur_tab_B := len(tab_b)
-
-	if tab_a[0] != tab_b[0] {
-		return -1
+	str_rn_a := []rune(a)
+	str_rn_b := []rune(b)
+	minLength := min(len(str_rn_a), len(str_rn_b))
+	i := 0
+	for i < minLength { //use for loop to compare strings
+		if str_rn_a[i] != str_rn_b[i] {
+			break
+		}
+		i++
 	}
-	if longeur_tab_A == longeur_tab_B {
-		return 0
+	if i == minLength {
+		if len(str_rn_a) > len(str_rn_b) {
+			return 1
+		} else if len(str_rn_a) < len(str_rn_b) {
+			return -1
+		} else {
+			return 0
+		}
 	} else {
-		return 1
+		if str_rn_a[i] > str_rn_b[i] {
+			return 1
+		} else {
+			return -1
+		}
 	}
+}
+
+func min(x, y int) int {
+	if x < y {
+		return x
+	}
+	return y
 }
