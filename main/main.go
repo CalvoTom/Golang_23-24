@@ -7,6 +7,8 @@ import (
 )
 
 func main() {
-	piscine.PrintNbr(-9223372036854775808)
+	piscine.PrintNbr(-123)
+	piscine.PrintNbr(0)
+	piscine.PrintNbr(123)
 	z01.PrintRune('\n')
 }
