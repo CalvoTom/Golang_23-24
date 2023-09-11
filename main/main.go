@@ -1,4 +1,5 @@
 package main
 
-func mai
+func main() {
+
 }
