@@ -17,7 +17,7 @@ func Capitalize(s string) string {
 		if str_rn[i] <= 90 && str_rn[i] >= 65 && need_maj == 1 {
 			need_maj = 0
 		}
-		if str_rn[i-1] == '.' || str_rn[i-1] == '!' || str_rn[i-1] == '?' || str_rn[i-1] == '}' || str_rn[i-1] == '>' || str_rn[i-1] == '[' || str_rn[i-1] == ']' || str_rn[i-1] == '^' {
+		if str_rn[i-1] == '.' || str_rn[i-1] == '!' || str_rn[i-1] == '?' || str_rn[i-1] == '}' || str_rn[i-1] == '>' || str_rn[i-1] == '[' || str_rn[i-1] == ']' || str_rn[i-1] == '^' || str_rn[i-1] == '+' {
 			str_rn[i] = str_rn[i] + 32
 		}
 	}
