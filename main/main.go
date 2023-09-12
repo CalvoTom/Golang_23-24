@@ -6,5 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.Index("+>lIWc75Ct+R}", "75Ct+R"))
+	arg := 4
+	fmt.Println(piscine.IterativeFactorial(arg))
 }
