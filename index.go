@@ -13,12 +13,15 @@ func Index(s string, toFind string) int {
 				min = i
 				return min
 			}
-			for j := 1; j < len(tab_tf); j++ {
-				for k := i + 1; k < len(tab_s); k++ {
-					if tab_s[k] == tab_s[j] {
-						min = i
-					}
+			j := 1
+			for k := i + 1; j < len(tab_tf); k++ {
+				if tab_s[k] != tab_tf[j] {
+					min = -1
+					break
+				} else if j == len(tab_tf)-1 {
+					return i
 				}
+				j++
 			}
 		}
 	}
