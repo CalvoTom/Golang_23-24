@@ -13,9 +13,9 @@ func Index(s string, toFind string) int {
 			if len(tab_tf) == 1 {
 				return min
 			}
-		}
-		if tab_s[i] == tab_tf[0] && tab_s[i+1] == tab_tf[1] {
-			min = i
+			if tab_s[i+1] != tab_tf[1] {
+				min = -1
+			}
 		}
 	}
 	return min

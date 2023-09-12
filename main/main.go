@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.Index("BGtlGo@Ir.pL=!", "3"))
+	fmt.Println(piscine.Index("qh_rDK>X~_MbR", "~JK=S^j\\)NP3X"))
 }
