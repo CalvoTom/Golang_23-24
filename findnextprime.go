@@ -1,11 +1,10 @@
 package piscine
 
 func FindNextPrime(nb int) int {
-	if IsPrime_test(nb) == true {
-		return nb
+	if !IsPrime_test(nb) {
+		nb = FindNextPrime(nb + 1)
 	}
-	return FindNextPrime(nb + 1)
-
+	return nb
 }
 
 func IsPrime_test(nb int) bool {
