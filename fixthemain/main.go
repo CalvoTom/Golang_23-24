@@ -12,8 +12,10 @@ type Door struct {
 	state int
 }
 
-const CLOSE = 0
-const OPEN = 1
+const (
+	CLOSE = 0
+	OPEN  = 1
+)
 
 func OpenDoor(ptrDoor *Door) bool {
 	PrintStr("Door Opening...")
