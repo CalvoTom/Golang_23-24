@@ -2,7 +2,7 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func PrintCombN(n int) {
+func PrintCombn(n int) {
 	switch {
 	case n == 1:
 		for i := 48; i < 58; i++ {
