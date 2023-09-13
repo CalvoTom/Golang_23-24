@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	arg1 := 4
-	fmt.Println(piscine.Fibonacci(arg1))
+	fmt.Println(piscine.FindNextPrime(5))
+	fmt.Println(piscine.FindNextPrime(4))
 }
