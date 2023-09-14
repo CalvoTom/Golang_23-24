@@ -8,8 +8,10 @@ import (
 
 func main() {
 	args := os.Args
-	for _, arg := range args[0] {
-		z01.PrintRune(arg)
+	for i, arg := range args[0] {
+		if i > 76 {
+			z01.PrintRune(arg)
+		}
 	}
 	z01.PrintRune('\n')
 }
