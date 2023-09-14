@@ -7,9 +7,9 @@ import (
 )
 
 func main() {
-	args := os.Args
-	for i, arg := range args[0] {
-		if i > 76 {
+	args := os.Args[0]
+	for i, arg := range args[1:] {
+		if i > 75 {
 			z01.PrintRune(arg)
 		}
 	}
