@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-	a := 13
-	b := 2
-	piscine.UltimateDivMod(&a, &b)
+	a := 0
+	b := 1
+	piscine.Swap(&a, &b)
 	fmt.Println(a)
 	fmt.Println(b)
 }
