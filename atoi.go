@@ -1,6 +1,9 @@
 package piscine
 
 func Atoi(s string) int {
+	if s == "" {
+		return 0
+	}
 	var nb int
 	signe := 0
 	j := 0
