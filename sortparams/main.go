@@ -6,12 +6,19 @@ import (
 	"github.com/01-edu/z01"
 )
 
+func PrintStr(s string) {
+	r := []rune(s)
+	for i := 0; i < len(r); i++ {
+		z01.PrintRune(r[i])
+	}
+}
+
 func main() {
 	args := os.Args[1:]
-	var tab []rune
+	var tab []string
 	var min int
 	for i := 0; i < len(args); i++ {
-		for j, arg := range args[i] {
+		for j, arg := range args {
 			if j >= 0 {
 				tab = append(tab, arg)
 			}
@@ -30,7 +37,8 @@ func main() {
 			tab[min] = val
 		}
 	}
-	for h := 0; h < len(tab); h++ {
-		z01.PrintRune(tab[h])
+	for h := 0; h < len(tab); h += 3 {
+		PrintStr(tab[h])
+		z01.PrintRune('\n')
 	}
 }
