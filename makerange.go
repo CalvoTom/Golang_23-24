@@ -6,7 +6,7 @@ func MakeRange(min, max int) []int {
 		return tab
 	}
 	tab = make([]int, min, max)
-	for i := 0; i < len(tab); i++ {
+	for i := 0; i <= max; i++ {
 		tab[i] = min
 		min += 1
 
