@@ -37,8 +37,13 @@ func Atoi(s string) int {
 func main() {
 	var tab []int
 	var nb int
+	p := 0
 	args := os.Args[1:]
 	for i := 0; i < len(args); i++ {
+		if args[i] == "--upper" {
+			rn := p + tab[j]
+			z01.PrintRune(rune(rn))
+		}
 		nb = Atoi(args[i])
 		tab = append(tab, nb)
 	}
@@ -46,7 +51,7 @@ func main() {
 		if tab[j] > 26 {
 			z01.PrintRune(rune(tab[j]))
 		} else {
-			rn := 96 + tab[j]
+			rn := p + tab[j]
 			z01.PrintRune(rune(rn))
 		}
 	}
