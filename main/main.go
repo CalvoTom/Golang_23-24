@@ -6,17 +6,11 @@ import (
 )
 
 func f(a, b int) int {
-	if a > b {
-		return 1
-	}
-	if a < b {
-		return -1
-	}
-	return 0
+	return a - b
 }
 
 func main() {
-	a1 := []int{-838010, -826582, -426779, -88594, 237044, 457667, 705974, 901994}
+	a1 := []int{-963688, -915713, -765927, -396192, -272952, -143476, 381051, 758562}
 	a2 := []int{0, 2, 1, 3}
 
 	result1 := piscine.IsSorted(f, a1)
