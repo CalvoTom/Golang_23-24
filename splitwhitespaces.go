@@ -11,10 +11,12 @@ func SplitWhiteSpaces(s string) []string {
 				tabStringSeparate = append(tabStringSeparate, s[lastIndice:indice])
 				lastIndice = indice + 1
 			}
-			if indice == len(s)-1 {
-				if lastIndice == indice {
-					tabStringSeparate = append(tabStringSeparate, s[lastIndice:])
-				}
+		}
+		if indice == len(s)-1 {
+			if lastIndice != indice {
+				return tabStringSeparate
+			} else {
+				tabStringSeparate = append(tabStringSeparate, s[lastIndice:])
 			}
 		}
 	}

@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Printf("%#v\n", piscine.SplitWhiteSpaces("Hello how arecc    you?  "))
+	fmt.Printf("%#v\n", piscine.SplitWhiteSpaces("Hello how arecc you? q  "))
 }
