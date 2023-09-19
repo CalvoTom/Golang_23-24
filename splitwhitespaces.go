@@ -6,15 +6,16 @@ func SplitWhiteSpaces(s string) []string {
 	for indice, val := range s {
 		if val == ' ' {
 			if lastIndice == indice {
-				lastIndice += 1
+				lastIndice = indice + 1
 			} else {
 				tabStringSeparate = append(tabStringSeparate, s[lastIndice:indice])
 				lastIndice = indice + 1
 			}
-		}
-		if indice == len(s)-1 {
-			tabStringSeparate = append(tabStringSeparate, s[lastIndice:])
-			return tabStringSeparate
+			if indice == len(s)-1 {
+				if lastIndice == indice {
+					tabStringSeparate = append(tabStringSeparate, s[lastIndice:])
+				}
+			}
 		}
 	}
 	return tabStringSeparate
