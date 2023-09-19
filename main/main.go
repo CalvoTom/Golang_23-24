@@ -11,7 +11,7 @@ func f(a, b int) int {
 
 func main() {
 	a1 := []int{-974077, -808534, -399643, -387147, -123757, 345721, 844177, 910534}
-	a2 := []int{0, 2, 1, 3}
+	a2 := []int{}
 
 	result1 := piscine.IsSorted(f, a1)
 	result2 := piscine.IsSorted(f, a2)
