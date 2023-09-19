@@ -1,18 +1,9 @@
 package piscine
 
-func f(a, b int) int {
-	if a > b {
-		return 1
-	}
-	if a < b {
-		return -1
-	}
-	return 0
-}
-
 func IsSorted(f func(a, b int) int, a []int) bool {
+	testeur := f(a[0], a[1])
 	for i := 1; i < len(a); i++ {
-		if f(a[i-1], a[i]) != -1 {
+		if f(a[i-1], a[i]) != testeur {
 			return false
 		}
 	}
