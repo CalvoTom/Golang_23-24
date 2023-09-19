@@ -10,14 +10,14 @@ func PrintWordsTables(a []string) {
 		for i := 0; i < len(values); i++ {
 			tabRune = append(tabRune, rune(values[i]))
 		}
-		tabRune = append(tabRune, 32)
+		tabRune = append(tabRune, 28)
 	}
 	for j := 0; j < len(tabRune); j++ {
 		if j == len(tabRune)-1 {
 			z01.PrintRune('\n')
 			break
 		}
-		if tabRune[j] == 32 {
+		if tabRune[j] == 28 {
 			z01.PrintRune('\n')
 			j += 1
 		}
