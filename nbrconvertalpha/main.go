@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/01-edu/z01"
@@ -44,16 +45,31 @@ func main() {
 	}
 	if needMaj == 1 {
 		for i := 1; i < len(args); i++ {
-			nb = Atoi(args[i]) + 96
-			tab = append(tab, nb)
+			if args[i] != " " {
+				nb = Atoi(args[i]) + 96
+				tab = append(tab, nb)
+			} else {
+				nb = Atoi(args[i]) + 96
+				tab = append(tab, nb)
+				tab = append(tab, 32)
+				i++
+			}
 		}
 		for j := 0; j < len(tab); j++ {
 			z01.PrintRune(rune(tab[j] - 32))
 		}
+		fmt.Println(tab)
 	} else {
 		for i := 0; i < len(args); i++ {
-			nb = Atoi(args[i]) + 96
-			tab = append(tab, nb)
+			if args[i] != "14" {
+				nb = Atoi(args[i]) + 96
+				tab = append(tab, nb)
+			} else {
+				nb = Atoi(args[i]) + 96
+				tab = append(tab, nb)
+				tab = append(tab, 32)
+				i += 1
+			}
 		}
 		for j := 0; j < len(tab); j++ {
 			z01.PrintRune(rune(tab[j]))
