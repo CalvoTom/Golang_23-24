@@ -19,8 +19,9 @@ func main() {
 		z01.PrintRune('\n')
 		return
 	}
-	if argumentsSeparate[0] == "--insert" && arguments[1] != "--order" || argumentsSeparate[0] == "--i" && arguments[1] != "--order" {
+	if argumentsSeparate[0] == "--insert" && arguments[1] != "--order" || argumentsSeparate[0] == "-i" && arguments[1] != "--order" {
 		insert(argumentsSeparate[1:])
+		insert(arguments[1:])
 		z01.PrintRune('\n')
 		return
 	}
@@ -183,5 +184,6 @@ func Split(s, sep string) []string {
 	if tabStringSeparate[len(tabStringSeparate)-1] == "" {
 		return tabStringSeparate[:len(tabStringSeparate)-1]
 	}
+	fmt.Println(tabStringSeparate)
 	return tabStringSeparate
 }
