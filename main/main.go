@@ -1,21 +1,20 @@
 package main
 
 import (
-	"fmt"
+	"github.com/01-edu/z01"
+
 	"piscine"
 )
 
-func f(a, b int) int {
-	return a - b
-}
-
 func main() {
-	a1 := []int{-974077, -808534, -399643, -387147, -123757, 345721, 844177, 910534}
-	a2 := []int{}
-
-	result1 := piscine.IsSorted(f, a1)
-	result2 := piscine.IsSorted(f, a2)
-
-	fmt.Println(result1)
-	fmt.Println(result2)
+	piscine.PrintNbrBase(125, "0123456789")
+	z01.PrintRune('\n')
+	piscine.PrintNbrBase(-125, "01")
+	z01.PrintRune('\n')
+	piscine.PrintNbrBase(125, "0123456789ABCDEF")
+	z01.PrintRune('\n')
+	piscine.PrintNbrBase(-125, "choumi")
+	z01.PrintRune('\n')
+	piscine.PrintNbrBase(125, "aa")
+	z01.PrintRune('\n')
 }
