@@ -184,6 +184,5 @@ func Split(s, sep string) []string {
 	if tabStringSeparate[len(tabStringSeparate)-1] == "" {
 		return tabStringSeparate[:len(tabStringSeparate)-1]
 	}
-	fmt.Println(tabStringSeparate)
 	return tabStringSeparate
 }
