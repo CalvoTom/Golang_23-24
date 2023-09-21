@@ -46,7 +46,7 @@ func main() {
 		for i := 1; i < len(args); i++ {
 			if args[i] != "14" {
 				nb = Atoi(args[i]) + 96
-				if nb-96 == 0 {
+				if nb-96 == 0 || nb-96 > 26 {
 					tab = append(tab, 32)
 				} else {
 					tab = append(tab, nb-32)
@@ -54,7 +54,7 @@ func main() {
 
 			} else {
 				nb = Atoi(args[i]) + 96
-				if nb-96 == 0 {
+				if nb-96 == 0 || nb-96 > 26 {
 					tab = append(tab, 32)
 				} else {
 					tab = append(tab, nb-32)
@@ -67,14 +67,14 @@ func main() {
 		for i := 0; i < len(args); i++ {
 			if args[i] != "14" {
 				nb = Atoi(args[i]) + 96
-				if nb-96 == 0 {
+				if nb-96 == 0 || nb-96 > 26 {
 					tab = append(tab, 32)
 				} else {
 					tab = append(tab, nb)
 				}
 			} else {
 				nb = Atoi(args[i]) + 96
-				if nb-96 == 0 {
+				if nb-96 == 0 || nb-96 > 26 {
 					tab = append(tab, 32)
 				} else {
 					tab = append(tab, nb)
