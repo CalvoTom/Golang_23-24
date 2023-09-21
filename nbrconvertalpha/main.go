@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/01-edu/z01"
@@ -58,7 +57,6 @@ func main() {
 		for j := 0; j < len(tab); j++ {
 			z01.PrintRune(rune(tab[j] - 32))
 		}
-		fmt.Println(tab)
 	} else {
 		for i := 0; i < len(args); i++ {
 			if args[i] != "14" {
