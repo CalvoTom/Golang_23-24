@@ -37,22 +37,26 @@ func Atoi(s string) int {
 func main() {
 	var tab []int
 	var nb int
-	p := 0
+	needMaj := 0
 	args := os.Args[1:]
-	for i := 0; i < len(args); i++ {
-		if args[i] == "--upper" {
-			rn := p + tab[j]
-			z01.PrintRune(rune(rn))
-		}
-		nb = Atoi(args[i])
-		tab = append(tab, nb)
+	if args[0] == "--upper" {
+		needMaj = 1
 	}
-	for j := 0; j < len(tab); j++ {
-		if tab[j] > 26 {
+	if needMaj == 1 {
+		for i := 1; i < len(args); i++ {
+			nb = Atoi(args[i]) + 96
+			tab = append(tab, nb)
+		}
+		for j := 0; j < len(tab); j++ {
+			z01.PrintRune(rune(tab[j] - 32))
+		}
+	} else {
+		for i := 0; i < len(args); i++ {
+			nb = Atoi(args[i]) + 96
+			tab = append(tab, nb)
+		}
+		for j := 0; j < len(tab); j++ {
 			z01.PrintRune(rune(tab[j]))
-		} else {
-			rn := p + tab[j]
-			z01.PrintRune(rune(rn))
 		}
 	}
 }
