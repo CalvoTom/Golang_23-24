@@ -47,43 +47,20 @@ func main() {
 	}
 	if needMaj == 1 {
 		for i := 1; i < len(args); i++ {
-			if args[i] != "32" {
-				nb = Atoi(args[i]) + 96
-				if nb-96 == 0 || nb-96 > 26 {
-					tab = append(tab, 32)
-				} else {
-					tab = append(tab, nb-32)
-				}
-
-			} else {
-				nb = Atoi(args[i]) + 96
-				if nb-96 == 0 || nb-96 > 26 {
-					tab = append(tab, 32)
-				} else {
-					tab = append(tab, nb-32)
-				}
+			nb = Atoi(args[i]) + 96
+			if nb-96 == 0 || nb-96 > 26 {
 				tab = append(tab, 32)
-				i++
+			} else {
+				tab = append(tab, nb-32)
 			}
 		}
 	} else {
 		for i := 0; i < len(args); i++ {
-			if args[i] != "32" {
-				nb = Atoi(args[i]) + 96
-				if nb-96 == 0 || nb-96 > 26 {
-					tab = append(tab, 32)
-				} else {
-					tab = append(tab, nb)
-				}
-			} else {
-				nb = Atoi(args[i]) + 96
-				if nb-96 == 0 || nb-96 > 26 {
-					tab = append(tab, 32)
-				} else {
-					tab = append(tab, nb)
-				}
+			nb = Atoi(args[i]) + 96
+			if nb-96 == 0 || nb-96 > 26 {
 				tab = append(tab, 32)
-				i += 1
+			} else {
+				tab = append(tab, nb)
 			}
 		}
 	}
