@@ -44,34 +44,48 @@ func main() {
 	}
 	if needMaj == 1 {
 		for i := 1; i < len(args); i++ {
-			if args[i] != " " {
+			if args[i] != "14" {
 				nb = Atoi(args[i]) + 96
-				tab = append(tab, nb)
+				if nb-96 == 0 {
+					tab = append(tab, 32)
+				} else {
+					tab = append(tab, nb-32)
+				}
+
 			} else {
 				nb = Atoi(args[i]) + 96
-				tab = append(tab, nb)
+				if nb-96 == 0 {
+					tab = append(tab, 32)
+				} else {
+					tab = append(tab, nb-32)
+				}
 				tab = append(tab, 32)
 				i++
 			}
-		}
-		for j := 0; j < len(tab); j++ {
-			z01.PrintRune(rune(tab[j] - 32))
 		}
 	} else {
 		for i := 0; i < len(args); i++ {
 			if args[i] != "14" {
 				nb = Atoi(args[i]) + 96
-				tab = append(tab, nb)
+				if nb-96 == 0 {
+					tab = append(tab, 32)
+				} else {
+					tab = append(tab, nb)
+				}
 			} else {
 				nb = Atoi(args[i]) + 96
-				tab = append(tab, nb)
+				if nb-96 == 0 {
+					tab = append(tab, 32)
+				} else {
+					tab = append(tab, nb)
+				}
 				tab = append(tab, 32)
 				i += 1
 			}
 		}
-		for j := 0; j < len(tab); j++ {
-			z01.PrintRune(rune(tab[j]))
-		}
+	}
+	for j := 0; j < len(tab); j++ {
+		z01.PrintRune(rune(tab[j]))
 	}
 	z01.PrintRune('\n')
 }
