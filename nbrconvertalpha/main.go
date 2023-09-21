@@ -39,6 +39,9 @@ func main() {
 	var nb int
 	needMaj := 0
 	args := os.Args[1:]
+	if len(args) == 0 {
+		return
+	}
 	if args[0] == "--upper" {
 		needMaj = 1
 	}
