@@ -47,7 +47,7 @@ func main() {
 	}
 	if needMaj == 1 {
 		for i := 1; i < len(args); i++ {
-			if args[i] != "14" {
+			if args[i] != "32" {
 				nb = Atoi(args[i]) + 96
 				if nb-96 == 0 || nb-96 > 26 {
 					tab = append(tab, 32)
@@ -68,7 +68,7 @@ func main() {
 		}
 	} else {
 		for i := 0; i < len(args); i++ {
-			if args[i] != "14" {
+			if args[i] != "32" {
 				nb = Atoi(args[i]) + 96
 				if nb-96 == 0 || nb-96 > 26 {
 					tab = append(tab, 32)
