@@ -21,7 +21,6 @@ func main() {
 }
 
 func check(err error, args []string) {
-	fmt.Println(err)
 	if err != nil {
 		if len(args) == 0 {
 			fmt.Println("File name missing")
