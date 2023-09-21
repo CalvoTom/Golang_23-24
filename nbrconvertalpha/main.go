@@ -59,4 +59,5 @@ func main() {
 			z01.PrintRune(rune(tab[j]))
 		}
 	}
+	z01.PrintRune('\n')
 }
