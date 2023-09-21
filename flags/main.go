@@ -20,8 +20,8 @@ func main() {
 		return
 	}
 	if argumentsSeparate[0] == "--insert" && arguments[1] != "--order" || argumentsSeparate[0] == "-i" && arguments[1] != "--order" {
-		insert(argumentsSeparate[1:])
 		insert(arguments[1:])
+		insert(argumentsSeparate[1:])
 		z01.PrintRune('\n')
 		return
 	}
