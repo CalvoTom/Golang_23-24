@@ -32,7 +32,7 @@ func main() {
 	if arguments[1] == "--order" && argumentsSeparate[0] == "--insert" {
 		tabToOrder := insertTab(argumentsSeparate[1:])
 		tabToOrder2 := orderTab()
-		tabOrdering(tabToOrder2[3:], tabToOrder)
+		tabOrdering(tabToOrder2[2:], tabToOrder)
 		z01.PrintRune('\n')
 		return
 	}
