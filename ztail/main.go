@@ -19,6 +19,7 @@ func main() {
 			if len(arguments) > 3 {
 				if index >= 2 {
 					data, err := os.ReadFile(ch)
+					imin := (len(data) - nb + 1)
 					if err != nil {
 						if index == len(arguments)-1 {
 							fmt.Println(err)
@@ -29,14 +30,22 @@ func main() {
 						continue
 					}
 					fmt.Println("==>", ch, "<==")
-					for i := (len(data) - nb + 1); i < len(data); i++ {
-						fmt.Printf(string(data[i]))
+					if imin < 0 {
+						for i := 0; i < len(data); i++ {
+							fmt.Printf(string(data[i]))
+						}
+						fmt.Println()
+					} else {
+						for i := imin; i < len(data); i++ {
+							fmt.Printf(string(data[i]))
+						}
+						fmt.Println()
 					}
-					fmt.Println()
 				}
 			} else {
 				if index == 2 {
 					data, err := os.ReadFile(ch)
+					imin := (len(data) - nb + 1)
 					if err != nil {
 						if index == len(arguments)-1 {
 							fmt.Println(err)
@@ -47,10 +56,17 @@ func main() {
 						continue
 					}
 					fmt.Println()
-					for i := (len(data) - nb + 1); i < len(data); i++ {
-						fmt.Printf(string(data[i]))
+					if imin < 0 {
+						for i := 0; i < len(data); i++ {
+							fmt.Printf(string(data[i]))
+						}
+						fmt.Println()
+					} else {
+						for i := imin; i < len(data); i++ {
+							fmt.Printf(string(data[i]))
+						}
+						fmt.Println()
 					}
-					fmt.Println()
 				}
 			}
 		}
