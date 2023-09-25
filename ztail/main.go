@@ -35,6 +35,8 @@ func main() {
 							fmt.Printf(string(data[i]))
 						}
 						fmt.Println()
+						fmt.Printf("exit status 1")
+						return
 					} else {
 						for i := imin; i < len(data); i++ {
 							fmt.Printf(string(data[i]))
@@ -61,6 +63,8 @@ func main() {
 							fmt.Printf(string(data[i]))
 						}
 						fmt.Println()
+						fmt.Printf("exit status 1")
+						return
 					} else {
 						for i := imin; i < len(data); i++ {
 							fmt.Printf(string(data[i]))
