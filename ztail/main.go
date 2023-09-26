@@ -26,22 +26,26 @@ func main() {
 							continue
 						}
 						fmt.Println(err)
-						fmt.Printf("\n")
+						fmt.Println()
 						continue
 					}
 					fmt.Println("==>", ch, "<==")
 					if imin < 0 {
 						for i := 0; i < len(data); i++ {
-							fmt.Printf(string(data[i]))
+							if string(data[i]) != "\n" {
+								fmt.Printf(string(data[i]))
+							}
 						}
-						fmt.Printf("\n")
+						fmt.Println()
 						fmt.Printf("exit status 1")
 						return
 					} else {
 						for i := imin; i < len(data); i++ {
-							fmt.Printf(string(data[i]))
+							if string(data[i]) != "\n" {
+								fmt.Printf(string(data[i]))
+							}
 						}
-						fmt.Printf("\n")
+						fmt.Println()
 					}
 				}
 			} else {
@@ -54,22 +58,26 @@ func main() {
 							continue
 						}
 						fmt.Println(err)
-						fmt.Printf("\n")
+						fmt.Println()
 						continue
 					}
-					fmt.Printf("\n")
+					fmt.Println()
 					if imin < 0 {
 						for i := 0; i < len(data); i++ {
-							fmt.Printf(string(data[i]))
+							if string(data[i]) != "\n" {
+								fmt.Printf(string(data[i]))
+							}
 						}
-						fmt.Printf("\n")
+						fmt.Println()
 						fmt.Printf("exit status 1")
 						return
 					} else {
 						for i := imin; i < len(data); i++ {
-							fmt.Printf(string(data[i]))
+							if string(data[i]) != "\n" {
+								fmt.Printf(string(data[i]))
+							}
 						}
-						fmt.Printf("\n")
+						fmt.Println()
 					}
 				}
 			}
