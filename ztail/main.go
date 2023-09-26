@@ -26,7 +26,7 @@ func main() {
 							continue
 						}
 						fmt.Println(err)
-						fmt.Println()
+						fmt.Printf("\n")
 						continue
 					}
 					fmt.Println("==>", ch, "<==")
@@ -34,14 +34,14 @@ func main() {
 						for i := 0; i < len(data); i++ {
 							fmt.Printf(string(data[i]))
 						}
-						fmt.Println()
+						fmt.Printf("\n")
 						fmt.Printf("exit status 1")
 						return
 					} else {
 						for i := imin; i < len(data); i++ {
 							fmt.Printf(string(data[i]))
 						}
-						fmt.Println()
+						fmt.Printf("\n")
 					}
 				}
 			} else {
@@ -54,22 +54,22 @@ func main() {
 							continue
 						}
 						fmt.Println(err)
-						fmt.Println()
+						fmt.Printf("\n")
 						continue
 					}
-					fmt.Println()
+					fmt.Printf("\n")
 					if imin < 0 {
 						for i := 0; i < len(data); i++ {
 							fmt.Printf(string(data[i]))
 						}
-						fmt.Println()
+						fmt.Printf("\n")
 						fmt.Printf("exit status 1")
 						return
 					} else {
 						for i := imin; i < len(data); i++ {
 							fmt.Printf(string(data[i]))
 						}
-						fmt.Println()
+						fmt.Printf("\n")
 					}
 				}
 			}
