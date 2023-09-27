@@ -37,7 +37,8 @@ func main() {
 						}
 					}
 					fmt.Println()
-					fmt.Println(fmt.Errorf("exit status 1"))
+					fmt.Print(fmt.Errorf("exit status 1"))
+					fmt.Println()
 					fmt.Println()
 				}
 			}
