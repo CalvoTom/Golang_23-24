@@ -31,17 +31,15 @@ func main() {
 				bouter = false
 				continue
 			}
-
 			if bouter {
-				fmt.Println()
-				fmt.Println("==>", fileName, "<==")
+				fmt.Printf("\n")
+				fmt.Print("==> ", fileName, " <==", "\n")
 				if imin > 0 {
 					for i := len(dataFile) - nbrByte; i < len(dataFile); i++ {
 						if string(dataFile[i]) != "\n" {
 							fmt.Print(string(dataFile[i]))
 						}
 					}
-					fmt.Println()
 				} else {
 					if err != nil {
 						fmt.Print(err)
@@ -56,7 +54,6 @@ func main() {
 					}
 				}
 			}
-			fmt.Println()
 		}
 	}
 }
