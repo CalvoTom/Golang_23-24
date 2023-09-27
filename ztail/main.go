@@ -5,67 +5,43 @@ import (
 	"os"
 )
 
+func ReturnStr(s string) int {
+	a := 0
+	for _, i := range s {
+		a *= 10
+		a += int(i) - 48
+	}
+	return a
+}
+
 func main() {
-	nbrByte, tabFileName := FindArgs()
-	if len(tabFileName) == 1 {
-		dataFile, err := os.ReadFile(tabFileName[0])
-		check(err)
-		for i := len(dataFile) - nbrByte; i < len(dataFile); i++ {
-			if string(dataFile[i]) != "\n" {
-				fmt.Print(string(dataFile[i]))
+	array := os.Args[1:]
+	if array[0] != "-c" {
+		return
+	}
+	for i := 2; i <= len(os.Args)-2; i++ {
+		filePath := array[i]
+		content, err := os.ReadFile(filePath)
+		var content2 []byte
+		if err != nil {
+			fmt.Print(err)
+			fmt.Printf("\n")
+			defer func() { os.Exit(1) }()
+			continue
+		}
+		if i < len(os.Args) && i != 2 && err == nil {
+			fmt.Printf("\n")
+		}
+		c := 0
+		for i := range content {
+			c = i
+		}
+		for j, k := range content {
+			if j > c-ReturnStr(array[1]) {
+				content2 = append(content2, k)
 			}
 		}
-	} else {
-		for index, fileName := range tabFileName {
-			dataFile, err := os.ReadFile(tabFileName[index])
-			imin := len(dataFile) - nbrByte
-
-			if check(err) {
-				fmt.Println()
-				fmt.Println("==>", fileName, "<==")
-				if imin > 0 {
-					for i := len(dataFile) - nbrByte; i < len(dataFile); i++ {
-						if string(dataFile[i]) != "\n" {
-							fmt.Print(string(dataFile[i]))
-						}
-					}
-					fmt.Println()
-				} else {
-					for i := 0; i < len(dataFile); i++ {
-						if string(dataFile[i]) != "\n" {
-							fmt.Print(string(dataFile[i]))
-						}
-					}
-					fmt.Println()
-					defer func() { os.Exit(1) }()
-				}
-			}
-		}
+		fmt.Print("==> ", filePath, " <==", "\n")
+		fmt.Printf(string(content2))
 	}
-}
-
-func FindArgs() (int, []string) {
-	var tabFileName []string
-	var nbrByte int
-	arguments := os.Args[1:]
-	if arguments[0] == "-c" && int(arguments[1][0]-48) > 0 {
-		for _, ch := range arguments[1] {
-			nbrByte = (nbrByte * 10) + int(ch-48)
-		}
-		for index, carac := range arguments {
-			if index >= 2 {
-				tabFileName = append(tabFileName, carac)
-			}
-		}
-	}
-	return nbrByte, tabFileName
-}
-
-func check(err error) bool {
-	if err != nil {
-		fmt.Print(err)
-		fmt.Println()
-		return false
-	}
-	return true
 }
