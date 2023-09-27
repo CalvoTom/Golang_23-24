@@ -19,7 +19,7 @@ func main() {
 			if len(arguments) > 3 {
 				if index >= 2 {
 					data, err := os.ReadFile(ch)
-					imin := (len(data) - nb + 1)
+					imin := (len(data) - nb)
 					if err != nil {
 						if index == len(arguments)-1 {
 							fmt.Println(err)
@@ -51,7 +51,7 @@ func main() {
 			} else {
 				if index == 2 {
 					data, err := os.ReadFile(ch)
-					imin := (len(data) - nb + 1)
+					imin := (len(data) - nb)
 					if err != nil {
 						if index == len(arguments)-1 {
 							fmt.Println(err)
