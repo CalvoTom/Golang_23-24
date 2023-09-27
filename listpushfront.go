@@ -12,10 +12,11 @@ type List struct {
 
 func ListPushFront(l *List, data interface{}) {
 	NewNodel := NodeL{Data: data}
-	if l.Tail == nil {
-		l.Tail = &NewNodel
-	} else {
-		l.Head.Next = l.Head
+	switch {
+	case l.Head == nil:
+		l.Head = &NewNodel
+	default:
+		NewNodel.Next = l.Head
+		l.Head = &NewNodel
 	}
-	l.Head = &NewNodel
 }
