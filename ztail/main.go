@@ -26,7 +26,7 @@ func main() {
 				if imin > 0 {
 					for i := len(dataFile) - nbrByte; i < len(dataFile); i++ {
 						if string(dataFile[i]) != "\n" {
-							fmt.Println(string(dataFile[i]))
+							fmt.Print(string(dataFile[i]))
 						}
 					}
 					fmt.Println()
