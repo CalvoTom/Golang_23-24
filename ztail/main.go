@@ -32,7 +32,9 @@ func main() {
 				continue
 			}
 			if bouter {
-				fmt.Printf("\n")
+				if index >= 1 {
+					fmt.Printf("\n")
+				}
 				fmt.Print("==> ", fileName, " <==", "\n")
 				if imin > 0 {
 					for i := len(dataFile) - nbrByte; i < len(dataFile); i++ {
