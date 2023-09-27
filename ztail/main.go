@@ -40,6 +40,7 @@ func main() {
 							fmt.Print(string(dataFile[i]))
 						}
 					}
+					fmt.Printf("\n")
 				} else {
 					if err != nil {
 						fmt.Print(err)
