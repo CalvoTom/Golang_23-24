@@ -23,7 +23,7 @@ func main() {
 					if err != nil {
 						if index == len(arguments)-1 {
 							fmt.Println(err)
-							continue
+							break
 						}
 						fmt.Println(err)
 						fmt.Println()
@@ -55,7 +55,7 @@ func main() {
 					if err != nil {
 						if index == len(arguments)-1 {
 							fmt.Println(err)
-							continue
+							break
 						}
 						fmt.Println(err)
 						fmt.Println()
