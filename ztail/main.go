@@ -37,8 +37,11 @@ func main() {
 						}
 					}
 					fmt.Println()
-					fmt.Print(fmt.Errorf("exit status 1"))
+					check(fmt.Errorf("exit status 1"))
 				}
+			}
+			if index != len(tabFileName)-1 {
+				fmt.Println()
 			}
 		}
 	}
@@ -64,7 +67,6 @@ func FindArgs() (int, []string) {
 func check(err error) bool {
 	if err != nil {
 		fmt.Print(err)
-		fmt.Println()
 		return false
 	}
 	return true
