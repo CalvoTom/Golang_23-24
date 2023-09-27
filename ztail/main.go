@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"os"
 )
@@ -37,7 +38,8 @@ func main() {
 						}
 					}
 					fmt.Println()
-					os.Exit(1)
+					err = errors.New("exit status 1")
+					check(err)
 					fmt.Println()
 				}
 			}
