@@ -6,6 +6,10 @@ import (
 )
 
 func main() {
+	ZTail()
+}
+
+func ZTail() int {
 	arguments := os.Args[1:]
 	var nb int
 	if len(arguments) == 0 {
@@ -38,7 +42,7 @@ func main() {
 						}
 						fmt.Println()
 						fmt.Printf("exit status 1")
-						return
+						return 1
 					} else {
 						for i := imin; i < len(data); i++ {
 							if string(data[i]) != "\n" {
@@ -70,7 +74,7 @@ func main() {
 						}
 						fmt.Println()
 						fmt.Printf("exit status 1")
-						return
+						return 1
 					} else {
 						for i := imin; i < len(data); i++ {
 							if string(data[i]) != "\n" {
@@ -83,4 +87,5 @@ func main() {
 			}
 		}
 	}
+	return 0
 }
