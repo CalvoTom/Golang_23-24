@@ -36,6 +36,7 @@ func main() {
 							fmt.Print(string(dataFile[i]))
 						}
 					}
+					fmt.Println()
 					defer func() { os.Exit(1) }()
 				}
 			}
