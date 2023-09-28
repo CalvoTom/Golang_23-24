@@ -11,13 +11,13 @@ func validNode(node *TreeNode, min, max int) bool {
 	if node == nil {
 		return true
 	}
-	if Atoi1(node.Data) < min || Atoi1(node.Data) > max {
+	if AtoiTest(node.Data) < min || AtoiTest(node.Data) > max {
 		return false
 	}
-	return validNode(node.Left, min, Atoi1(node.Data)-1) && validNode(node.Right, Atoi1(node.Data)+1, max)
+	return validNode(node.Left, min, AtoiTest(node.Data)-1) && validNode(node.Right, AtoiTest(node.Data)+1, max)
 }
 
-func Atoi1(s string) int {
+func AtoiTest(s string) int {
 	if !IsValid(s) {
 		return 0
 	}
