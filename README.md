@@ -36,7 +36,7 @@ This experience gave me a solid start with Go and sharpened my ability to work i
 Feel free to reach out if you'd like to discuss:
 
 - [CalvoTom](https://github.com/CalvoTom)
-- 
+   
 ---
 
 Thanks for checking out this repository!
